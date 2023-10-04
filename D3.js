@@ -225,7 +225,13 @@ Math.floor(Math.random * newStarWarsCharacter.length);
 console.log(newStarWarsCharacter);
 let random = Math.floor(Math.random() * newStarWarsCharacter.length);
 
+let hairEx =
+  newStarWarsCharacter[random].hair_color === "n/a" ||
+  newStarWarsCharacter[random].hair_color === "none"
+    ? "i'm bald"
+    : "my hair is " + newStarWarsCharacter[random].hair_color;
+
 console.log(`Hi my name is ${newStarWarsCharacter[random].name} and i'm  ${newStarWarsCharacter[random].height} tall.
-I weigh ${newStarWarsCharacter[random].mass}kg and my hair is ${newStarWarsCharacter[random].hair_color}, 
+I weigh ${newStarWarsCharacter[random].mass}kg and, ${hairEx}
 my skin is ${newStarWarsCharacter[random].skin_color} and my eye is ${newStarWarsCharacter[random].eye_color}.
 My birthday is on ${newStarWarsCharacter[random].birth_year} and i'm a ${newStarWarsCharacter[random].gender}.`);
