@@ -211,7 +211,8 @@ console.log(starWarsCharacters.length);
 
 for (i = 0; i < starWarsCharacters.length; i++) {
   if (starWarsCharacters[i].gender === "female") {
-    starWarsCharacters[i].slice(i, 1, null);
+    starWarsCharacters[i].splice(i, 1);
+    i--;
   }
 }
 console.log(starWarsCharacters.length);
@@ -220,4 +221,11 @@ console.log(starWarsCharacters);
 /* --EXTRA-- ESERCIZIO 10
   Crea una funzionalità che selezioni un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo (a tuo piacimento).
 */
-Math.random;
+Math.floor(Math.random * newStarWarsCharacter.length);
+console.log(newStarWarsCharacter);
+let random = Math.floor(Math.random() * newStarWarsCharacter.length);
+
+console.log(`Hi my name is ${newStarWarsCharacter[random].name} and i'm  ${newStarWarsCharacter[random].height} tall.
+I weigh ${newStarWarsCharacter[random].mass}kg and my hair is ${newStarWarsCharacter[random].hair_color}, 
+my skin is ${newStarWarsCharacter[random].skin_color} and my eye is ${newStarWarsCharacter[random].eye_color}.
+My birthday is on ${newStarWarsCharacter[random].birth_year} and i'm a ${newStarWarsCharacter[random].gender}.`);
