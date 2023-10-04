@@ -211,7 +211,7 @@ console.log(starWarsCharacters.length);
 
 for (i = 0; i < starWarsCharacters.length; i++) {
   if (starWarsCharacters[i].gender === "female") {
-    starWarsCharacters[i].splice(i, 1);
+    starWarsCharacters.splice(i, 1);
     i--;
   }
 }
